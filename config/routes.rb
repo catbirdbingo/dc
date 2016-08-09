@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :tasks
   resources   :polls
   match       '/polls/:id/voting' => 'polls#voting', via: [:get], :as => :voting_poll
   match       '/mypolls' => 'polls#my_index', via: [:get], :as => :my_polls

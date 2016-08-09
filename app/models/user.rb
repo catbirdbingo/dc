@@ -11,6 +11,7 @@ class User < ApplicationRecord
   has_many      :polls, -> { includes :options }
   has_many      :chat_messages
   has_many      :votes
+  has_many      :tasks
 
   acts_as_commontator
 
